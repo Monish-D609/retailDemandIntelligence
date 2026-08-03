@@ -1,0 +1,11 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+olist|stem|86bb62acdf99abbf|61c96d8f5da1971e|5c3c62070b6592b1|1970510823||t20668.3433492483s|s39127802b|39127802|rds|local|vector|||8.58||
+raw_data_files|stem|ea532c0d2d5377cc|ce47a6077832f332|2c530c1562a7fbd1|426728836|data/raw/olist_customers_dataset.csv*data/raw/olist_geolocation_dataset.csv*data/raw/olist_order_items_dataset.csv*data/raw/olist_order_payments_dataset.csv*data/raw/olist_order_reviews_dataset.csv*data/raw/olist_orders_dataset.csv*data/raw/olist_products_dataset.csv*data/raw/olist_sellers_dataset.csv*data/raw/product_category_name_translation.csv*data/raw/README.md|t20664.767587245s|s126187382b|126187382|file|local|vector|||0||
+order_level|stem|7b8ec7fc853d6922|03ce08683a227473|a66f7b9fdb2e5cb4|1806032704||t20668.343500823s|s10307039b|10307039|rds|local|vector|||9.43||
+customer_level|stem|f36e2308180838e2|04cfc50197e48161|4376313b49ca8a59|-362446013||t20668.3436751079s|s3613632b|3613632|rds|local|vector|||14.13||
+category_week|stem|344405f376566a16|e783136774839d4c|3769e0076e4cf22e|1962302468||t20668.3437094018s|s25905b|25905|rds|local|vector|||1.06||
+validate_olist_data|function|6b7bb7b0c5b363f5
+build_order_level_table|function|d2c75dc5feab7295
+build_category_week_table|function|89f81eb25f29b3b9
+build_customer_level_table|function|0990de2d392258c4
+load_raw_olist_data|function|03b5a93b20e7a62b
