@@ -4,8 +4,15 @@ raw_data_files|stem|ea532c0d2d5377cc|ce47a6077832f332|2c530c1562a7fbd1|426728836
 order_level|stem|7b8ec7fc853d6922|03ce08683a227473|a66f7b9fdb2e5cb4|1806032704||t20668.343500823s|s10307039b|10307039|rds|local|vector|||9.43||
 customer_level|stem|f36e2308180838e2|04cfc50197e48161|4376313b49ca8a59|-362446013||t20668.3436751079s|s3613632b|3613632|rds|local|vector|||14.13||
 category_week|stem|344405f376566a16|e783136774839d4c|3769e0076e4cf22e|1962302468||t20668.3437094018s|s25905b|25905|rds|local|vector|||1.06||
+hierarchical_sales|stem|593dcdf4c7df9676|001a71c002148fed|bccfe5728ae3021d|579293938||t20668.5756698111s|s9365b|9365|rds|local|vector|||0.28||
+hierarchical_forecast|stem|91d3284aa9932479|bbe969bba1f83d08|03cc5a744408333c|-1864746586||t20668.5757033134s|s201849b|201849|rds|local|vector|||0.81||
+forecast_accuracy|stem|bed4f16916559fa0|717db4b577594b7a|586842bc8efcb0aa|-419933919||t20668.5825590804s|s2402b|2402|rds|local|vector|||3.04|Non-integer lag orders for random walk models are not supported. Rounding to the nearest integer.. Non-integer lag orders for random walk models are not supported. Rounding to the nearest integer.. Non-integer lag orders for random walk models are not supported. Rounding to the nearest integer.. Non-integer lag orders for random walk models are not supported. Rounding to the nearest integer.. Non-integer lag orders for random walk models are not supported. Rounding to the nearest integer.. Non-integer lag orders for random walk models are not supported. Rounding to the nearest integer.. Non-integer lag orders for random walk models are not supported. Rounding to the nearest integer.. Non-integer lag orders for random walk models are not supported. Rounding to the nearest integer.. Non-integer lag orders for random walk models are not supported. Rounding to the nearest integer.. Non-integer lag orders for random walk models are not supported. Rounding to the nearest integer.. Non-integer lag orders for random walk models are not supported. Rounding to the nearest integer.. Non-integer lag orders for random walk models are not supported. Rounding to the nearest integer.. There were 12 warnings in `mutate()`. The first warning was: ℹ In argument: `snaive = (function (object, ...) ...`. Caused by warning: ! Non-integer lag orders for random walk models are not supported. Rounding to the nearest integer. ℹ Run dplyr::last_dplyr_warnings() to see the 11 remaining warnings.|
 validate_olist_data|function|6b7bb7b0c5b363f5
 build_order_level_table|function|d2c75dc5feab7295
 build_category_week_table|function|89f81eb25f29b3b9
+.Random.seed|object|8099fc5ec587f58b
 build_customer_level_table|function|0990de2d392258c4
+fit_hierarchical_forecast|function|93bff75943687412
 load_raw_olist_data|function|03b5a93b20e7a62b
+prepare_hierarchical_sales|function|8c97e2d203057d08
+evaluate_hierarchical_forecast|function|c67204055ceb4e30
