@@ -73,7 +73,7 @@ evaluate_hierarchical_forecast <- function(hierarchical_data, test_weeks = 12) {
     model(
       ets    = ETS(total_sales),
       naive  = NAIVE(total_sales),
-      snaive = SNAIVE(total_sales ~ lag("year"))
+      snaive = SNAIVE(total_sales ~ lag(52))
     ) %>%
     reconcile(ets_reconciled = min_trace(ets))
   
