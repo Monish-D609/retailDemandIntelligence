@@ -12,6 +12,7 @@ repeat_purchase_dataset|stem|26c55a64c3036b2f|20e0e5c4380d31ed|fca63ab23369a2ea|
 repeat_purchase_model|stem|3ec82defc9a5c0fa|1f241f3f8648bf11|80e0279e40337a30|-1071057037||t20682.509095004s|s37206969b|37206969|rds|local|vector|||0.9||
 threshold_sweep|stem|1fe6c2ddccc03342|40960e7400858fa2|3317726daadcbf0f|-870695147||t20682.5148268374s|s969b|969|rds|local|vector|||0.29||
 threshold_plot|stem|a1140309ce6f9dd5|5b20f95c9fd8bb48|f358aa93441dc9b4|1087428673||t20682.5148291419s|s262935b|262935|rds|local|vector|||0.07||
+threshold_comparison|stem|5e74a756fb4d958f|0d7fb94c45b1e8ab|86f70f544119391c|-1986586734||t20682.5198802806s|s333b|333|rds|local|vector|||0.03||
 validate_olist_data|function|6b7bb7b0c5b363f5
 fit_repeat_purchase_model|function|cd2c5d6567588e4f
 build_repeat_purchase_dataset|function|293bcf4fcd03b04a
@@ -20,11 +21,13 @@ build_order_level_table|function|d2c75dc5feab7295
 build_review_features|function|3036d78c4d3e067b
 plot_threshold_sweep|function|cb8ded4c70b3fba1
 build_category_week_table|function|89f81eb25f29b3b9
-.Random.seed|object|5c76c9bed6554c5e
+.Random.seed|object|51f71f51ea698e22
 build_customer_level_table|function|0990de2d392258c4
 fit_hierarchical_forecast|function|93bff75943687412
 load_raw_olist_data|function|03b5a93b20e7a62b
 prepare_hierarchical_sales|function|8c97e2d203057d08
 evaluate_hierarchical_forecast|function|c67204055ceb4e30
+confusion_at_threshold|function|ac19024b32112bc5
 evaluate_threshold_sweep|function|170476c3f015d06e
-threshold_comparison|stem|5e74a756fb4d958f|0d7fb94c45b1e8ab|86f70f544119391c|-1986586734||t20682.5198802806s|s333b|333|rds|local|vector|||0.03||
+best_threshold|stem|d966de0f0e7f04f7|b7fa60004b0ad602|b47874608bf77e1c|1358395073||t20684.4217169343s|s55b|55|rds|local|vector|||0.01||
+final_confusion_matrix|stem|648942a20a23a9e2|8a7e4f369250a43e|64ef191faf8163e3|1810031691||t20684.4217245426s|s155b|155|rds|local|vector|||0.02||

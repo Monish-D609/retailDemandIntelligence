@@ -213,3 +213,15 @@ compare_naive_vs_optimal_threshold <- function(fit_result, optimal_threshold) {
     summarise_at_threshold(optimal_threshold, "optimal (F1-tuned)")
   )
 }
+
+
+#' Build the confusion matrix at a specific (typically F1-optimal) threshold
+#'
+#' @param fit_result output list from fit_repeat_purchase_model()
+#' @param threshold classification threshold to apply
+#' @return a table (confusion matrix)
+#' @export
+confusion_at_threshold <- function(fit_result, threshold) {
+  pred <- factor(ifelse(fit_result$pred_prob > threshold, "yes", "no"), levels = c("no", "yes"))
+  table(predicted = pred, actual = fit_result$test$is_repeat_buyer)
+}

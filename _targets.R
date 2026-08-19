@@ -40,6 +40,12 @@ list(
   
   tar_target(threshold_plot, plot_threshold_sweep(threshold_sweep)),
   
+  tar_target(best_threshold, {
+    threshold_sweep %>% dplyr::slice_max(f1, n = 1, with_ties = FALSE) %>% dplyr::pull(threshold)
+  }),
+  
+  tar_target(final_confusion_matrix, confusion_at_threshold(repeat_purchase_model, best_threshold)),
+  
   tar_target(threshold_comparison, {
     best_t <- threshold_sweep %>% dplyr::slice_max(f1, n = 1, with_ties = FALSE) %>% dplyr::pull(threshold)
     compare_naive_vs_optimal_threshold(repeat_purchase_model, best_t)
