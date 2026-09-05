@@ -17,7 +17,8 @@ export_dashboard_data <- function() {
     "repeat_purchase_model",
     "threshold_sweep",
     "threshold_comparison",
-    "final_confusion_matrix"
+    "final_confusion_matrix",
+    "best_threshold"
   )
   
   for (obj_name in objects_to_export) {

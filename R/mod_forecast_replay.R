@@ -2,24 +2,15 @@ library(shiny)
 library(dplyr)
 library(ggplot2)
 
-#' UI for the forecast replay module — steps through held-out weeks,
-#' comparing the model's forecast against real actual sales as they "arrive"
+#' UI for the forecast replay module (plot + table only — the week slider
+#' now lives in app_ui.R so it can be shared across modules)
 #'
 #' @param id module namespace id
 mod_forecast_replay_ui <- function(id) {
   ns <- NS(id)
   tagList(
     fluidRow(
-      column(
-        width = 4,
-        sliderInput(ns("week_step"), "Simulated weeks revealed:",
-                    min = 0, max = 8, value = 0, step = 1, animate = animationOptions(interval = 1200)),
-        helpText("Drag the slider or press play to reveal held-out weeks one at a time, comparing the model's forecast (fit on earlier data only) against real sales as they arrive.")
-      ),
-      column(
-        width = 8,
-        plotOutput(ns("replay_plot"), height = "420px")
-      )
+      column(width = 12, plotOutput(ns("replay_plot"), height = "420px"))
     ),
     fluidRow(
       column(width = 12, tableOutput(ns("week_summary")))
@@ -33,12 +24,10 @@ mod_forecast_replay_ui <- function(id) {
 #' @param hierarchical_sales tsibble of historical (pre-simulation) sales
 #' @param hierarchical_forecast list with $forecast, fitted on historical data only
 #' @param category_week_split list with $simulation, real held-out weekly data
-mod_forecast_replay_server <- function(id, hierarchical_sales, hierarchical_forecast, category_week_split) {
+#' @param week_step reactive() returning the number of simulated weeks currently revealed
+mod_forecast_replay_server <- function(id, hierarchical_sales, hierarchical_forecast, category_week_split, week_step) {
   moduleServer(id, function(input, output, session) {
     
-    
-    
-    # Build a clean aggregated actuals series from the simulation weeks
     actual_weekly <- category_week_split$simulation %>%
       group_by(order_week) %>%
       summarise(actual_sales = sum(total_sales, na.rm = TRUE), .groups = "drop") %>%
@@ -61,7 +50,7 @@ mod_forecast_replay_server <- function(id, hierarchical_sales, hierarchical_fore
       left_join(actual_weekly, by = "order_week")
     
     output$replay_plot <- renderPlot({
-      revealed <- combined %>% slice_head(n = input$week_step)
+      revealed <- combined %>% slice_head(n = week_step())
       
       ggplot() +
         geom_line(data = historical_weekly, aes(x = order_week, y = total_sales), color = "grey40") +
@@ -77,7 +66,7 @@ mod_forecast_replay_server <- function(id, hierarchical_sales, hierarchical_fore
     
     output$week_summary <- renderTable({
       combined %>%
-        slice_head(n = input$week_step) %>%
+        slice_head(n = week_step()) %>%
         mutate(
           order_week = format(order_week, "%Y-%m-%d"),
           error = actual_sales - forecast_sales,
