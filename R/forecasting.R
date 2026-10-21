@@ -13,9 +13,10 @@ library(fabletools)
 #' @param trim_weeks number of most recent weeks to drop as incomplete
 #' @return a tsibble with an aggregated hierarchy (categories + Total)
 #' @export
-prepare_hierarchical_sales <- function(category_week, top_n = 10, trim_weeks = 3) {
+prepare_hierarchical_sales <- function(category_week, top_n = 10, trim_weeks = 3, start_date = as.Date("2017-01-01")) {
   
   top_categories <- category_week %>%
+    filter(order_week >= start_date) %>%
     group_by(category) %>%
     summarise(total = sum(total_sales, na.rm = TRUE), .groups = "drop") %>%
     arrange(desc(total)) %>%
@@ -26,7 +27,7 @@ prepare_hierarchical_sales <- function(category_week, top_n = 10, trim_weeks = 3
   cutoff_week <- max_week - (trim_weeks * 7)
   
   category_week %>%
-    filter(!is.na(category), order_week <= cutoff_week) %>%
+    filter(!is.na(category), order_week >= start_date, order_week <= cutoff_week) %>%
     mutate(category = ifelse(category %in% top_categories, category, "other")) %>%
     group_by(order_week, category) %>%
     summarise(total_sales = sum(total_sales, na.rm = TRUE), .groups = "drop") %>%

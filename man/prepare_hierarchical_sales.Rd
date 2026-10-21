@@ -8,7 +8,12 @@ Drops the last `trim_weeks` of data, since the final period(s) in this
 dataset are typically incomplete (data collection cutoff mid-week),
 which would otherwise distort both model fitting and accuracy evaluation.}
 \usage{
-prepare_hierarchical_sales(category_week, top_n = 10, trim_weeks = 3)
+prepare_hierarchical_sales(
+  category_week,
+  top_n = 10,
+  trim_weeks = 3,
+  start_date = as.Date("2017-01-01")
+)
 }
 \arguments{
 \item{category_week}{data.frame from build_category_week_table()}

@@ -2,8 +2,8 @@
 % Please edit documentation in R/mod_forecast_replay.R
 \name{mod_forecast_replay_ui}
 \alias{mod_forecast_replay_ui}
-\title{UI for the forecast replay module — steps through held-out weeks,
-comparing the model's forecast against real actual sales as they "arrive"}
+\title{UI for the forecast replay module (plot + table only — the week slider
+now lives in app_ui.R so it can be shared across modules)}
 \usage{
 mod_forecast_replay_ui(id)
 }
@@ -11,6 +11,6 @@ mod_forecast_replay_ui(id)
 \item{id}{module namespace id}
 }
 \description{
-UI for the forecast replay module — steps through held-out weeks,
-comparing the model's forecast against real actual sales as they "arrive"
+UI for the forecast replay module (plot + table only — the week slider
+now lives in app_ui.R so it can be shared across modules)
 }

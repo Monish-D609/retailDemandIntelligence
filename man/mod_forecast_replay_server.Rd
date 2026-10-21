@@ -8,7 +8,8 @@ mod_forecast_replay_server(
   id,
   hierarchical_sales,
   hierarchical_forecast,
-  category_week_split
+  category_week_split,
+  week_step
 )
 }
 \arguments{
@@ -19,6 +20,8 @@ mod_forecast_replay_server(
 \item{hierarchical_forecast}{list with $forecast, fitted on historical data only}
 
 \item{category_week_split}{list with $simulation, real held-out weekly data}
+
+\item{week_step}{reactive() returning the number of simulated weeks currently revealed}
 }
 \description{
 Server for the forecast replay module

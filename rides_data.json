@@ -1,0 +1,314 @@
+{
+  "drivers": [
+    {
+      "driver_id": "D001",
+      "name": "Arun Kumar",
+      "vehicle_type": "Sedan",
+      "rating": 4.8,
+      "rides": [
+        {
+          "ride_id": "R001",
+          "passenger_id": "P001",
+          "start_time": "2026-09-01 08:30:00",
+          "end_time": "2026-09-01 09:15:00",
+          "start_location": {
+            "lat": 12.9716,
+            "lon": 77.5946
+          },
+          "end_location": {
+            "lat": 12.9352,
+            "lon": 77.6245
+          },
+          "distance_km": 18,
+          "fare": 420,
+          "payment_type": "cash",
+          "ride_rating": 5
+        },
+        {
+          "ride_id": "R002",
+          "passenger_id": "P002",
+          "start_time": "2026-09-05 14:00:00",
+          "end_time": "2026-09-05 15:20:00",
+          "start_location": {
+            "lat": 12.9716,
+            "lon": 77.5946
+          },
+          "end_location": {
+            "lat": 13.0358,
+            "lon": 77.597
+          },
+          "distance_km": 32,
+          "fare": 680,
+          "payment_type": "card",
+          "ride_rating": 4
+        },
+        {
+          "ride_id": "R003",
+          "passenger_id": "P003",
+          "start_time": "2026-09-12 18:00:00",
+          "end_time": "2026-09-12 19:45:00",
+          "start_location": {
+            "lat": 12.9716,
+            "lon": 77.5946
+          },
+          "end_location": {
+            "lat": 13.1986,
+            "lon": 77.7066
+          },
+          "distance_km": 55,
+          "fare": 950,
+          "payment_type": "card",
+          "ride_rating": 5
+        }
+      ]
+    },
+    {
+      "driver_id": "D002",
+      "name": "Priya Sharma",
+      "vehicle_type": "SUV",
+      "rating": 4.6,
+      "rides": [
+        {
+          "ride_id": "R004",
+          "passenger_id": "P004",
+          "start_time": "2026-09-03 10:00:00",
+          "end_time": "2026-09-03 10:40:00",
+          "start_location": {
+            "lat": 12.9352,
+            "lon": 77.6245
+          },
+          "end_location": {
+            "lat": 12.9716,
+            "lon": 77.5946
+          },
+          "distance_km": 15,
+          "fare": 350,
+          "payment_type": "cash",
+          "ride_rating": 3
+        },
+        {
+          "ride_id": "R005",
+          "passenger_id": "P005",
+          "start_time": "2026-09-08 16:30:00",
+          "end_time": "2026-09-08 17:50:00",
+          "start_location": {
+            "lat": 12.9716,
+            "lon": 77.5946
+          },
+          "end_location": {
+            "lat": 13.0827,
+            "lon": 80.2707
+          },
+          "distance_km": 48,
+          "fare": 850,
+          "payment_type": "card",
+          "ride_rating": 4
+        },
+        {
+          "ride_id": "R006",
+          "passenger_id": "P006",
+          "start_time": "2026-09-15 20:00:00",
+          "end_time": "2026-09-15 21:30:00",
+          "start_location": {
+            "lat": 12.9716,
+            "lon": 77.5946
+          },
+          "end_location": {
+            "lat": 13.1986,
+            "lon": 77.7066
+          },
+          "distance_km": 62,
+          "fare": 1100,
+          "payment_type": "cash",
+          "ride_rating": 2
+        }
+      ]
+    },
+    {
+      "driver_id": "D003",
+      "name": "Rahul Singh",
+      "vehicle_type": "Hatchback",
+      "rating": 4.4,
+      "rides": [
+        {
+          "ride_id": "R007",
+          "passenger_id": "P007",
+          "start_time": "2026-09-02 09:00:00",
+          "end_time": "2026-09-02 09:35:00",
+          "start_location": {
+            "lat": 12.9716,
+            "lon": 77.5946
+          },
+          "end_location": {
+            "lat": 12.9352,
+            "lon": 77.6245
+          },
+          "distance_km": 12,
+          "fare": 280,
+          "payment_type": "cash",
+          "ride_rating": 5
+        },
+        {
+          "ride_id": "R008",
+          "passenger_id": "P008",
+          "start_time": "2026-09-10 11:00:00",
+          "end_time": "2026-09-10 12:10:00",
+          "start_location": {
+            "lat": 12.9716,
+            "lon": 77.5946
+          },
+          "end_location": {
+            "lat": 13.0358,
+            "lon": 77.597
+          },
+          "distance_km": 28,
+          "fare": 520,
+          "payment_type": "card",
+          "ride_rating": 4
+        },
+        {
+          "ride_id": "R009",
+          "passenger_id": "P009",
+          "start_time": "2026-09-14 17:00:00",
+          "end_time": "2026-09-14 18:40:00",
+          "start_location": {
+            "lat": 12.9716,
+            "lon": 77.5946
+          },
+          "end_location": {
+            "lat": 13.1986,
+            "lon": 77.7066
+          },
+          "distance_km": 45,
+          "fare": 780,
+          "payment_type": "card",
+          "ride_rating": 2
+        }
+      ]
+    },
+    {
+      "driver_id": "D004",
+      "name": "Sneha Iyer",
+      "vehicle_type": "Sedan",
+      "rating": 4.9,
+      "rides": [
+        {
+          "ride_id": "R010",
+          "passenger_id": "P010",
+          "start_time": "2026-09-04 07:30:00",
+          "end_time": "2026-09-04 08:15:00",
+          "start_location": {
+            "lat": 12.9716,
+            "lon": 77.5946
+          },
+          "end_location": {
+            "lat": 12.9352,
+            "lon": 77.6245
+          },
+          "distance_km": 20,
+          "fare": 450,
+          "payment_type": "card",
+          "ride_rating": 5
+        },
+        {
+          "ride_id": "R011",
+          "passenger_id": "P011",
+          "start_time": "2026-09-09 13:00:00",
+          "end_time": "2026-09-09 14:30:00",
+          "start_location": {
+            "lat": 12.9716,
+            "lon": 77.5946
+          },
+          "end_location": {
+            "lat": 13.1986,
+            "lon": 77.7066
+          },
+          "distance_km": 58,
+          "fare": 980,
+          "payment_type": "cash",
+          "ride_rating": 5
+        },
+        {
+          "ride_id": "R012",
+          "passenger_id": "P012",
+          "start_time": "2026-09-13 19:00:00",
+          "end_time": "2026-09-13 20:00:00",
+          "start_location": {
+            "lat": 12.9716,
+            "lon": 77.5946
+          },
+          "end_location": {
+            "lat": 13.0358,
+            "lon": 77.597
+          },
+          "distance_km": 25,
+          "fare": 500,
+          "payment_type": "card",
+          "ride_rating": 4
+        }
+      ]
+    },
+    {
+      "driver_id": "D005",
+      "name": "Vikram Das",
+      "vehicle_type": "SUV",
+      "rating": 4.7,
+      "rides": [
+        {
+          "ride_id": "R013",
+          "passenger_id": "P013",
+          "start_time": "2026-09-06 12:00:00",
+          "end_time": "2026-09-06 13:00:00",
+          "start_location": {
+            "lat": 12.9716,
+            "lon": 77.5946
+          },
+          "end_location": {
+            "lat": 13.0358,
+            "lon": 77.597
+          },
+          "distance_km": 35,
+          "fare": 620,
+          "payment_type": "cash",
+          "ride_rating": 5
+        },
+        {
+          "ride_id": "R014",
+          "passenger_id": "P014",
+          "start_time": "2026-09-11 15:00:00",
+          "end_time": "2026-09-11 16:30:00",
+          "start_location": {
+            "lat": 12.9716,
+            "lon": 77.5946
+          },
+          "end_location": {
+            "lat": 13.1986,
+            "lon": 77.7066
+          },
+          "distance_km": 52,
+          "fare": 900,
+          "payment_type": "card",
+          "ride_rating": 4
+        },
+        {
+          "ride_id": "R015",
+          "passenger_id": "P015",
+          "start_time": "2026-09-16 09:00:00",
+          "end_time": "2026-09-16 10:40:00",
+          "start_location": {
+            "lat": 12.9716,
+            "lon": 77.5946
+          },
+          "end_location": {
+            "lat": 13.1986,
+            "lon": 77.7066
+          },
+          "distance_km": 65,
+          "fare": 1200,
+          "payment_type": "card",
+          "ride_rating": 3
+        }
+      ]
+    }
+  ]
+}
